@@ -112,10 +112,10 @@ Write your own code to complete the steps below.
 4. Square every number.
 
 ```{r}
-top_secret + 14
-(top_secret * 18) - 257
-exp(top_secret)
-top_secret^2
+top_secret1 <- (top_secret + 14)
+top_secret2 <- ((top_secret1 * 18) - 257)
+top_secret3 <- exp(top_secret2)
+top_secret4 <- top_secret3 ^ 2
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, there should be 496 numbers in the secret message that are below 17.
@@ -128,7 +128,12 @@ top_secret^2
 10. Turn your matrix back into a vector.
 
 ```{r}
-
+tsmatrix<- matrix(data=top_secret4, ncol = 5)
+evens <- seq(2, 502, 2)
+step7 <- ts[,1] - evens
+step8 <- ts[18:24, 3] - 100
+step9 <- ts[, 4:5] *2
+step10 <- c(step9)
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 100.
